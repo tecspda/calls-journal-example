@@ -237,6 +237,7 @@ async function add(){
 }
 
 function total() {
+	totalDurringHtml.innerHTML = calls.sum('call_duration')
 	totalPriceHtml.innerHTML = calls.sum('price')
 	
 }
@@ -289,6 +290,10 @@ table thead th {
 	vertical-align: middle !important;
 	text-align: center !important;
 	background-color: #c9ff7a;
+}
+
+table tfoot th {
+	text-align: center;
 }
 
 </style>
