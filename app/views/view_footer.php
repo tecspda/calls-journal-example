@@ -1,4 +1,6 @@
 
+<script src="/assets/js/imask.min.js"></script>
+
 <script>
 // создаем DOM элемент из HTML
 function htmlToElement(html) {
@@ -17,8 +19,31 @@ Array.prototype.sum = function(columnName){
   return s.toFixed(2)
 }
 
+function inputPhoneFormat(el) {
+  var maskOptions = {
+    mask: '+7(000)000-00-00',
+    lazy: false,
+  };
+  new IMask(el, maskOptions);
+}
+
+function updatePhoneFormat() {
+  var phone_inputs = document.querySelectorAll('input[type="tel"]');
+  var maskOptions = {
+    mask: '+7 (000) 000-00-00',
+    lazy: false,
+  };
+  phone_inputs.forEach((el) => {
+    new IMask(el, maskOptions);
+  });
+
+}
+
 </script>
 
 </div>
+
+<div class="my-5">&nbsp;</div>
+
 </body>
 </html>

@@ -92,6 +92,7 @@ $arr = $calls->get();
 						<td id="totalDurringHtml"></td>
 						<td id="totalPriceHtml"></td>
 						<td></td>
+						<td></td>
 					</tr>
 				</tfoot>
 			</table>
@@ -121,7 +122,7 @@ function setAddRow(){
 						<?=$users_html?>
 					</select>
 				</td>
-				<td><input style="max-width: 150px;" type="text" data-id="new"></td>
+				<td><input style="max-width: 150px;" type="tel" data-id="new"></td>
 				<td>
 					<select data-id="new">
 						<option value="0" selected="selected">Исх.</option>
@@ -144,6 +145,9 @@ function setAddRow(){
 		`)
 		lastElement.after(row)
 		newItem = {name: '', phone: 0, operator_id: 0}
+		
+		updatePhoneFormat()
+		
 	} else {
 		alert('Сначала сохраните ранеее созданную строку')
 	}
@@ -183,7 +187,7 @@ async function load() {
 			let row = htmlToElement(`
 				<tr>
 					<td style="max-width: 100px;">${el.user_name}</td>
-					<td style="max-width: 100px;">${el.phone}</td>
+					<td style="max-width: 100px;">${el.phone}"</td>
 					<td style="max-width: 50px;">${el.type == 0 ? '<span class="out">исх.</span>' : '<span class="in">вх.</span>'}</td>
 					<td>${el.date_time}</td>
 					<td>${el.call_duration}</td>
@@ -292,8 +296,10 @@ table thead th {
 	background-color: #c9ff7a;
 }
 
-table tfoot th {
+table tfoot td {
 	text-align: center;
+	background-color: #c9ff7a;
+	font-weight: bold;
 }
 
 </style>

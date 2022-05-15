@@ -86,7 +86,7 @@ function setAddRow(){
 		var row = htmlToElement(`
 			<tr>
 				<td><input type="text" data-id="new" onchange="newItem.name = this.value"></td>
-				<td><input type="text" data-id="new" onchange="newItem.phone = this.value"></td>
+				<td><input type="tel" data-id="new" onchange="newItem.phone = this.value"></td>
 				<td class="text-center">
 					<select data-id="new">
 						<?=$operators_html?>
@@ -99,6 +99,7 @@ function setAddRow(){
 		`)
 		lastElement.after(row)
 		newItem = {name: '', phone: 0, operator_id: 0}
+		updatePhoneFormat()
 	} else {
 		alert('Сначала сохраните ранеее созданную строку')
 	}

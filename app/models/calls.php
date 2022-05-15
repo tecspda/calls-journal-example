@@ -30,6 +30,7 @@ class Calls
 			JOIN users c
 				   ON a.user_id = c.id
 			$where
+			ORDER BY a.date_time
 HERE;
 // dd($sql_text, 'aaa');
 		$ret = $this->db->getQuery($sql_text);
