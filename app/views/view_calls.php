@@ -187,7 +187,7 @@ async function load() {
 			let row = htmlToElement(`
 				<tr>
 					<td style="max-width: 100px;">${el.user_name}</td>
-					<td style="max-width: 100px;">${el.phone}"</td>
+					<td style="max-width: 100px;">${el.phone}</td>
 					<td style="max-width: 50px;">${el.type == 0 ? '<span class="out">исх.</span>' : '<span class="in">вх.</span>'}</td>
 					<td>${el.date_time}</td>
 					<td>${el.call_duration}</td>
