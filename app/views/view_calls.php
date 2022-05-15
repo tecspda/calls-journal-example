@@ -60,7 +60,7 @@ $arr = $calls->get();
 						<th>Дата</th>
 						<th>Длительность,<br>сек.</th>
 						<th>Цена</th>
-						<th>Оператор пользователя</th>
+						<th>Оператор<br>пользователя</th>
 						<th class="text-center">Действия</th>
 					</tr>
 				</thead>
@@ -275,6 +275,12 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
 #tBody > tr > td:nth-child(3) {
 	text-align: center;
+}
+
+#tBody > tr > td:nth-child(5),
+#tBody > tr > td:nth-child(6),
+#tBody > tr > td:nth-child(7) {
+	max-width: 100px;
 }
 
 #tBody > tr > td:nth-child(5),
