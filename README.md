@@ -1,5 +1,12 @@
 # Call log
 
+<p>
+<img src="https://img.shields.io/github/license/tecspda/calls-journal-example" />
+<img src="https://img.shields.io/github/stars/tecspda" />
+
+</p>
+
+
 An example of a call log implementation.
 
 `Stack`: php, javascript, REST API, bootstrap css, mysql
